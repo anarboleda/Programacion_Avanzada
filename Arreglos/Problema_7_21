@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+const int MAX_LONGITUD_PALABRA = 20;
+
+void desplazarPalabra(const char palabra[], int desplazamiento) {
+    for (int i = 0; i < desplazamiento; ++i) {
+        cout << " ";
+    }
+    cout << palabra << endl;
+}
+
+int main() {
+    char palabra[MAX_LONGITUD_PALABRA];
+
+    // Solicita al usuario que ingrese una palabra
+    cout << "Ingrese una palabra: ";
+    cin >> palabra;
+
+    int longitudPalabra = strlen(palabra);
+
+    // Desplaza la palabra de izquierda a derecha
+    for (int desplazamiento = 0; desplazamiento <= longitudPalabra; ++desplazamiento) {
+        desplazarPalabra(palabra, desplazamiento);
+    }
+
+    return 0;
+}
