@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+const int MAX_LONGITUD_FRASE = 100;
+
+int main() {
+    char frase[MAX_LONGITUD_FRASE];
+
+    // Solicita al usuario que ingrese una frase
+    cout << "Ingrese una frase: ";
+    cin.getline(frase, MAX_LONGITUD_FRASE);
+
+    int longitudFrase = strlen(frase);
+
+    // Variables para almacenar palabras
+    char palabra[MAX_LONGITUD_FRASE];
+    int longitudPalabra = 0;
+
+    // Itera a través de la frase
+    for (int i = 0; i <= longitudFrase; ++i) {
+        // Verifica si el carácter actual es un espacio o el final de la frase
+        if (frase[i] == ' ' || frase[i] == '\0') {
+            // Imprime la palabra y su longitud
+            cout << palabra << " (" << longitudPalabra << " letras)" << endl;
+
+            // Reinicia la palabra y la longitud
+            longitudPalabra = 0;
+            memset(palabra, 0, sizeof(palabra));
+        } else {
+            // Agrega el carácter a la palabra y aumenta la longitud
+            palabra[longitudPalabra++] = frase[i];
+        }
+    }
+
+    return 0;
+}
