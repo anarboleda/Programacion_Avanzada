@@ -1,0 +1,8 @@
+Los problemas resueltos son:
+
+problema_7_7
+problema_7_9
+problema_7_19
+problema_7_23
+problema_7_25
+problema_7_29
