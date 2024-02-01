@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+const int MAX_LONGITUD = 100;
+
+void visualizarCuadro(const char cadena[]) {
+    int longitud = strlen(cadena);
+
+    // Imprime la parte superior del cuadro
+    for (int i = 0; i < longitud + 4; ++i) {
+        cout << "*";
+    }
+     cout << endl;
+
+    // Imprime los lados del cuadro con la cadena en el centro
+      cout << "* " << cadena << " *" << endl;
+
+    // Imprime la parte inferior del cuadro
+    for (int i = 0; i < longitud + 4; ++i) {
+        cout << "*";
+    }
+   cout << endl;
+}
+
+int main() {
+  char input[MAX_LONGITUD];
+
+      // Solicita al usuario que ingrese una cadena de caracteres
+      cout << "Ingrese una cadena de caracteres: ";
+      cin.getline(input, MAX_LONGITUD);
+
+      // Visualiza la cadena como un cuadro
+      visualizarCuadro(input);
+
+      return 0;
+  }
