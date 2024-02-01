@@ -1,0 +1,35 @@
+include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int n;
+
+    // Solicita al usuario el número de cadenas
+    cout << "Ingrese el número de cadenas: ";
+    cin >> n;
+
+    // Vector para almacenar las cadenas
+    vector<string> cadenas;
+
+    // Solicita al usuario que ingrese las cadenas
+    cout << "Ingrese las cadenas una por una:\n";
+    for (int i = 0; i < n; ++i) {
+        string cadena;
+        cin >> cadena;
+        cadenas.push_back(cadena);
+    }
+
+    // Ordena las cadenas en orden alfabético
+    sort(cadenas.begin(), cadenas.end());
+
+    // Muestra las cadenas ordenadas
+    cout << "Cadenas ordenadas:\n";
+    for (const string& cadena : cadenas) {
+        cout << cadena << endl;
+    }
+
+    return 0;
+}
