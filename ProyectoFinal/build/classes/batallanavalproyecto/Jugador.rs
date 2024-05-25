@@ -1,0 +1,2 @@
+batallanavalproyecto.JugadorHumano
+batallanavalproyecto.Jugador
